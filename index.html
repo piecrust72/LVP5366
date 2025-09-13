@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LVP vs Garage Tile — Comparison (Dark Mode)</title>
+<style>
+  :root{
+    --bg: #0b0b0b;
+    --panel: #121212;
+    --panel-alt: #161616;
+    --header: #222222;
+    --muted: #cfcfcf;
+    --accent: #9dd3ff;
+    --border: #2a2a2a;
+  }
+
+  /* Page */
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg,var(--bg), #070707);
+    color:var(--muted);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin:28px auto;
+    padding:20px;
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+  }
+
+  header h1{
+    margin:0;
+    font-size:20px;
+    color:white;
+    letter-spacing:0.2px;
+  }
+  header p{ margin:0; color:var(--muted); font-size:13px;}
+
+  /* Table */
+  .table-card{
+    background: linear-gradient(180deg,var(--panel), var(--panel-alt));
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout: fixed; /* enforce column widths and wrapping */
+  }
+
+  thead th{
+    background:var(--header);
+    color:#fff;
+    text-align:left;
+    padding:14px 18px;
+    font-weight:700;
+    font-size:13px;
+    border-bottom:1px solid rgba(255,255,255,0.03);
+  }
+
+  thead th:first-child { width:22%; min-width:170px; } /* narrower feature column */
+  thead th:nth-child(2) { width:39%; }
+  thead th:nth-child(3) { width:39%; }
+
+  tbody td{
+    padding:16px 18px;               /* more vertical space between rows */
+    vertical-align:top;
+    font-size:13px;
+    line-height:1.45;
+    color:var(--muted);
+    border-bottom:1px solid rgba(255,255,255,0.03);
+    white-space: normal;             /* allow wrapping */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* subtle alternating row colors */
+  tbody tr:nth-child(odd) td{ background: rgba(255,255,255,0.01); }
+  tbody tr:nth-child(even) td{ background: rgba(255,255,255,0.02); }
+
+  /* highlight LVP column slightly */
+  tbody td:nth-child(2){
+    box-shadow: inset 0 0 0 1px rgba(157,211,255,0.02);
+  }
+
+  /* small footer */
+  .note{
+    margin-top:12px;
+    font-size:12px;
+    color:#9aa0a6;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width:900px){
+    header h1{ font-size:18px; }
+    thead th:first-child { width:35%; min-width:140px; }
+    thead th:nth-child(2), thead th:nth-child(3) { width:32.5%; }
+    tbody td { padding:12px; font-size:13px; }
+  }
+
+  /* Print-friendly: switch to light theme for paper & conserve ink */
+  @media print{
+    :root{
+      --bg: #ffffff;
+      --panel: #ffffff;
+      --panel-alt: #ffffff;
+      --header: #f2f2f2;
+      --muted: #111111;
+      --border: #e0e0e0;
+    }
+    body{ color: #111; background: #fff; }
+    .wrap{ margin: 0; padding: 0; max-width: 100%; }
+    .table-card{ box-shadow: none; border: 1px solid var(--border); }
+    thead th{ color: #111; background: #f7f7f7; }
+    tbody td{ color:#111; background: #fff; border-bottom:1px solid var(--border); }
+    /* reduce margins */
+    header p{ display:none; }
+    /* force page breaks if needed */
+    table{ page-break-inside: avoid; }
+  }
+
+  /* Small helpful print hint */
+  .print-hint{
+    margin-top:10px;
+    font-size:12px;
+    color:#9aa0a6;
+  }
+
+  /* Accessibility focus outline */
+  a:focus, button:focus { outline: 3px solid rgba(157,211,255,0.25); outline-offset:2px; border-radius:4px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>LVP vs Garage Tile — Quick Comparison</h1>
+        <p>Dark-mode, wrapped, printable chart. Save or print from your browser (Ctrl/Cmd+P).</p>
+      </div>
+    </header>
+
+    <div class="table-card" role="region" aria-label="Comparison table of luxury vinyl plank and garage tile">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Luxury Vinyl Plank (LVP)</th>
+            <th>Garage Tile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Moisture Resistance</td>
+            <td>100% water-resistant options available; many LVP products are fully waterproof and safe for basements when installed with proper perimeter gaps and moisture protection.</td>
+            <td>Water-resistant, but tiles allow water & humidity to migrate underneath which can trap moisture and encourage dampness or musty smells over time.</td>
+          </tr>
+
+          <tr>
+            <td>Comfort Underfoot</td>
+            <td>Soft, quiet and warm (especially with an underlayment). Comfortable for living spaces and long standing periods.</td>
+            <td>Hard, cold, and plasticky — feels like a garage surface, not cozy flooring for a home area.</td>
+          </tr>
+
+          <tr>
+            <td>Aesthetic Appeal</td>
+            <td>High-end wood or stone visuals that convincingly mimic real materials; adds style and perceived value to a basement.</td>
+            <td>Industrial, utilitarian look. Patterns and colors are limited; reads like a workshop or garage rather than a finished living area.</td>
+          </tr>
+
+          <tr>
+            <td>Subfloor Forgiveness</td>
+            <td>Floating systems can accommodate minor unevenness with the right underlayment; better tolerance for imperfect subfloors than rigid tiles.</td>
+            <td>Rigid tiles emphasize unevenness — gaps, rocking, or clicking result unless the subfloor is very flat and levelled first.</td>
+          </tr>
+
+          <tr>
+            <td>Installation</td>
+            <td>Click-lock floating installation is fast and DIY-friendly; glueless options speed the job and reduce mess.</td>
+            <td>Interlocking tiles are DIY possible but require careful alignment and can be time consuming over large areas; seams may show.</td>
+          </tr>
+
+          <tr>
+            <td>Maintenance</td>
+            <td>Very low maintenance — sweep and damp mop. Stains don’t penetrate; surface cleans easily.</td>
+            <td>Dirt and liquid can accumulate in seams and beneath tiles; periodic tile lifting or more aggressive cleaning often required.</td>
+          </tr>
+
+          <tr>
+            <td>Durability</td>
+            <td>Scratch and dent resistant (depending on wear layer); holds up well under furniture and ordinary household traffic.</td>
+            <td>Extremely durable for heavy loads (cars), but in home use some tiles can crack or become brittle and show wear differently than LVP.</td>
+          </tr>
+
+          <tr>
+            <td>Noise</td>
+            <td>Quiet with underlayment — minimal hollow sound; pleasant and homey underfoot.</td>
+            <td>Hollow, clicky, and echoing when walked on; can sound cheap and unpleasant in living areas.</td>
+          </tr>
+
+          <tr>
+            <td>Temperature</td>
+            <td>Warmer to the touch, especially with underlayment; more comfortable in cold basements.</td>
+            <td>Cold and unforgiving — amplifies basement chill unless a separate insulating subfloor is added.</td>
+          </tr>
+
+          <tr>
+            <td>Replacement</td>
+            <td>Individual planks can be replaced; matching is usually straightforward if you keep a sample or lot number.</td>
+            <td>Tiles can be swapped but color fading or discontinued patterns often make replacements stand out.</td>
+          </tr>
+
+          <tr>
+            <td>Resale Value</td>
+            <td>Perceived as a proper finished floor; buyers generally view LVP as an upgrade that improves appeal.</td>
+            <td>Can look temporary or like a converted garage; less attractive to buyers seeking finished living spaces.</td>
+          </tr>
+
+          <tr>
+            <td>Overall Vibe</td>
+            <td>Feels like a finished, modern living area — inviting and versatile for many styles and uses.</td>
+            <td>Feels utilitarian: garage, workshop, or storage. Not the right tone for a finished basement living room or guest area.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      Tip: To print with best results, open your browser's Print dialog and set <strong>Margins</strong> to <em>Default</em> or <em>Minimum</em>, check <strong>Background graphics</strong> if you want header shading (not needed for content), and choose <strong>Landscape</strong> if you prefer wider tables on a single sheet.
+    </div>
+  </div>
+</body>
+</html>
